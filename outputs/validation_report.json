@@ -1,0 +1,280 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-05-17T14:25:48.783657",
+    "overall_status": "FAIL",
+    "total_rules_run": 7,
+    "rules_passed": 2,
+    "rules_failed": 5
+  },
+  "validation_results": {
+    "by_category": {
+      "COMPLETENESS": [
+        {
+          "rule_id": "V1",
+          "category": "COMPLETENESS",
+          "description": "No null values in mandatory fields",
+          "passed": 95,
+          "failed": 3,
+          "status": "FAIL",
+          "failing_records": [
+            {
+              "trade_id": "TRD-0016"
+            },
+            {
+              "trade_id": "TRD-0031"
+            },
+            {
+              "trade_id": "TRD-0051"
+            }
+          ]
+        },
+        {
+          "rule_id": "V3",
+          "category": "COMPLETENESS",
+          "description": "All counterparty IDs reference a known counterparty",
+          "passed": 95,
+          "failed": 3,
+          "status": "FAIL",
+          "failing_records": [
+            {
+              "trade_id": "TRD-0016",
+              "counterparty_id": NaN
+            },
+            {
+              "trade_id": "TRD-0031",
+              "counterparty_id": NaN
+            },
+            {
+              "trade_id": "TRD-0051",
+              "counterparty_id": NaN
+            }
+          ]
+        }
+      ],
+      "FINANCIAL_LOGIC": [
+        {
+          "rule_id": "V4_V5",
+          "category": "FINANCIAL_LOGIC",
+          "description": "value_date >= trade_date AND maturity_date > value_date",
+          "passed": 95,
+          "failed": 3,
+          "status": "FAIL",
+          "failing_records": [
+            {
+              "trade_id": "TRD-0008",
+              "trade_date": "2024-10-17 00:00:00",
+              "value_date": "2024-10-14 00:00:00",
+              "maturity_date": "2025-03-08 00:00:00"
+            },
+            {
+              "trade_id": "TRD-0021",
+              "trade_date": "2024-07-24 00:00:00",
+              "value_date": "2024-07-21 00:00:00",
+              "maturity_date": "2024-11-17 00:00:00"
+            },
+            {
+              "trade_id": "TRD-0036",
+              "trade_date": "2024-12-28 00:00:00",
+              "value_date": "2025-01-02 00:00:00",
+              "maturity_date": "2024-12-23 00:00:00"
+            }
+          ]
+        },
+        {
+          "rule_id": "V6",
+          "category": "FINANCIAL_LOGIC",
+          "description": "notional_amount must be positive",
+          "passed": 97,
+          "failed": 1,
+          "status": "FAIL",
+          "failing_records": [
+            {
+              "trade_id": "TRD-0046",
+              "notional_amount": -1200000.0
+            }
+          ]
+        }
+      ],
+      "LIMIT_MONITORING": [
+        {
+          "rule_id": "V10",
+          "category": "LIMIT_MONITORING",
+          "description": "Net exposure per counterparty does not exceed credit limit",
+          "passed": 5,
+          "failed": 0,
+          "status": "PASS",
+          "failing_records": []
+        }
+      ],
+      "REGULATORY": [
+        {
+          "rule_id": "V13",
+          "category": "REGULATORY",
+          "description": "All ACTIVE trades must have a trade_repository_ref",
+          "passed": 13,
+          "failed": 5,
+          "status": "FAIL",
+          "failing_records": [
+            {
+              "trade_id": "TRD-0018",
+              "trade_date": "2024-12-03",
+              "instrument_type": "FX_FORWARD"
+            },
+            {
+              "trade_id": "TRD-0034",
+              "trade_date": "2024-05-22",
+              "instrument_type": "CASH_DEPOSIT"
+            },
+            {
+              "trade_id": "TRD-0007",
+              "trade_date": "2024-05-18",
+              "instrument_type": "INTEREST_RATE_SWAP"
+            },
+            {
+              "trade_id": "TRD-0033",
+              "trade_date": "2024-04-12",
+              "instrument_type": "INTEREST_RATE_SWAP"
+            },
+            {
+              "trade_id": "TRD-0004",
+              "trade_date": "2024-02-19",
+              "instrument_type": "FX_FORWARD"
+            }
+          ],
+          "regulatory_note": "Null trade_repository_ref = EMIR reporting gap"
+        },
+        {
+          "rule_id": "V15",
+          "category": "REGULATORY",
+          "description": "No duplicate trade_id values",
+          "passed": 98,
+          "failed": 0,
+          "status": "PASS",
+          "failing_records": []
+        }
+      ]
+    },
+    "failures_only": [
+      {
+        "rule_id": "V1",
+        "category": "COMPLETENESS",
+        "description": "No null values in mandatory fields",
+        "passed": 95,
+        "failed": 3,
+        "status": "FAIL",
+        "failing_records": [
+          {
+            "trade_id": "TRD-0016"
+          },
+          {
+            "trade_id": "TRD-0031"
+          },
+          {
+            "trade_id": "TRD-0051"
+          }
+        ]
+      },
+      {
+        "rule_id": "V3",
+        "category": "COMPLETENESS",
+        "description": "All counterparty IDs reference a known counterparty",
+        "passed": 95,
+        "failed": 3,
+        "status": "FAIL",
+        "failing_records": [
+          {
+            "trade_id": "TRD-0016",
+            "counterparty_id": NaN
+          },
+          {
+            "trade_id": "TRD-0031",
+            "counterparty_id": NaN
+          },
+          {
+            "trade_id": "TRD-0051",
+            "counterparty_id": NaN
+          }
+        ]
+      },
+      {
+        "rule_id": "V4_V5",
+        "category": "FINANCIAL_LOGIC",
+        "description": "value_date >= trade_date AND maturity_date > value_date",
+        "passed": 95,
+        "failed": 3,
+        "status": "FAIL",
+        "failing_records": [
+          {
+            "trade_id": "TRD-0008",
+            "trade_date": "2024-10-17 00:00:00",
+            "value_date": "2024-10-14 00:00:00",
+            "maturity_date": "2025-03-08 00:00:00"
+          },
+          {
+            "trade_id": "TRD-0021",
+            "trade_date": "2024-07-24 00:00:00",
+            "value_date": "2024-07-21 00:00:00",
+            "maturity_date": "2024-11-17 00:00:00"
+          },
+          {
+            "trade_id": "TRD-0036",
+            "trade_date": "2024-12-28 00:00:00",
+            "value_date": "2025-01-02 00:00:00",
+            "maturity_date": "2024-12-23 00:00:00"
+          }
+        ]
+      },
+      {
+        "rule_id": "V6",
+        "category": "FINANCIAL_LOGIC",
+        "description": "notional_amount must be positive",
+        "passed": 97,
+        "failed": 1,
+        "status": "FAIL",
+        "failing_records": [
+          {
+            "trade_id": "TRD-0046",
+            "notional_amount": -1200000.0
+          }
+        ]
+      },
+      {
+        "rule_id": "V13",
+        "category": "REGULATORY",
+        "description": "All ACTIVE trades must have a trade_repository_ref",
+        "passed": 13,
+        "failed": 5,
+        "status": "FAIL",
+        "failing_records": [
+          {
+            "trade_id": "TRD-0018",
+            "trade_date": "2024-12-03",
+            "instrument_type": "FX_FORWARD"
+          },
+          {
+            "trade_id": "TRD-0034",
+            "trade_date": "2024-05-22",
+            "instrument_type": "CASH_DEPOSIT"
+          },
+          {
+            "trade_id": "TRD-0007",
+            "trade_date": "2024-05-18",
+            "instrument_type": "INTEREST_RATE_SWAP"
+          },
+          {
+            "trade_id": "TRD-0033",
+            "trade_date": "2024-04-12",
+            "instrument_type": "INTEREST_RATE_SWAP"
+          },
+          {
+            "trade_id": "TRD-0004",
+            "trade_date": "2024-02-19",
+            "instrument_type": "FX_FORWARD"
+          }
+        ],
+        "regulatory_note": "Null trade_repository_ref = EMIR reporting gap"
+      }
+    ]
+  },
+  "recommendation": "Data NOT approved. 5 rule(s) failed. Review failures before use."
+}
