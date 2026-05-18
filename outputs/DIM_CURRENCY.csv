@@ -1,0 +1,6 @@
+currency_key,currency_code,currency_name,region
+1,EUR,EUR,Europe
+2,JPY,JPY,Asia
+3,GBP,GBP,Europe
+4,CHF,CHF,Europe
+5,USD,USD,North America

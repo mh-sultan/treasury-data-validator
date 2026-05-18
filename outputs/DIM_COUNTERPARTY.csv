@@ -1,0 +1,6 @@
+counterparty_key,counterparty_id,counterparty_name,country,credit_limit_eur,credit_rating,approved_date
+1,CP001,Deutsche Bank,Germany,500000000,A,2024-01-15
+2,CP002,HSBC,United Kingdom,400000000,A+,2024-01-15
+3,CP003,JPMorgan,United States,450000000,AA-,2024-01-15
+4,CP004,BNP Paribas,France,350000000,A,2024-01-15
+5,CP005,Goldman Sachs,United States,300000000,A+,2024-01-15

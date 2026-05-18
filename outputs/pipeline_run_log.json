@@ -1,0 +1,15 @@
+{
+  "run_timestamp": "2026-05-18T21:58:55.201615",
+  "status": "SUCCESS",
+  "records_input": 101,
+  "records_clean": 98,
+  "records_rejected": 3,
+  "tables_loaded": [
+    "DIM_COUNTERPARTY",
+    "DIM_INSTRUMENT",
+    "DIM_DATE",
+    "DIM_CURRENCY",
+    "FACT_TRANSACTIONS"
+  ],
+  "warehouse_db": "C:\\Users\\mhuss\\treasury-data-validator\\warehouse.db"
+}
