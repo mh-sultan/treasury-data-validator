@@ -1,5 +1,5 @@
 instrument_key,instrument_type,instrument_class,is_derivative,clearing_eligible
-1,FX_FORWARD,FX,True,True
-2,CASH_DEPOSIT,RATES,True,True
-3,INTEREST_RATE_SWAP,MONEY_MARKET,False,False
-4,COMMODITY_FORWARD,COMMODITY,True,True
+1,CASH_DEPOSIT,FX,True,True
+2,COMMODITY_FORWARD,RATES,True,True
+3,FX_FORWARD,MONEY_MARKET,False,False
+4,INTEREST_RATE_SWAP,COMMODITY,True,True

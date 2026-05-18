@@ -134,7 +134,14 @@ fact_transactions = fact[[
     'trade_repository_ref', 'clearing_eligible', 'load_timestamp'
 ]]
 
+for col in ['transaction_key', 'trade_date_key', 'value_date_key',
+            'counterparty_key', 'instrument_key', 'currency_key']:
+    fact_transactions[col] = fact_transactions[col].fillna(0).astype(int)
+
 print(f"  FACT_TRANSACTIONS: {len(fact_transactions)} rows")
+
+if 'counterparty_key' in fact.columns:
+    fact = fact.drop(columns=['counterparty_key'])
 
 # ── STEP 4: LOAD INTO SQLITE WAREHOUSE ─────────────────────
 print("Step 4: Loading into warehouse database...")
